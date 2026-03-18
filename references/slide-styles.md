@@ -11,18 +11,22 @@ When generating slides, the user must choose a style. Each style defines informa
 **Audience expectation**: Readers are domain experts who want maximum information per slide
 
 **Visual characteristics**:
-- Information-packed layouts with multiple content zones per slide
-- Small font sizes (10-12pt body), dense text blocks
-- Multi-column layouts (2-3 columns), nested cards and tables
-- Comparison tables, before/after contrasts, process flows
-- Minimal whitespace — every pixel carries information
-- Color-coded sections to differentiate content zones
-- Footnotes with technical references (e.g., SAP transaction codes, module names)
+- Information-packed layouts with 4-6 distinct content zones per slide
+- Very small font sizes (8-10pt body, 7-8pt footnotes), extremely dense text blocks
+- Multi-column layouts (2-3 columns), nested cards, tables, and sub-sections within each column
+- Multiple hierarchy levels: section header → sub-headers → bullet lists → nested sub-bullets → footnotes
+- Horizontal process flow diagrams spanning the full page width with icons and labels at each step
+- Detail callout boxes with technical specifications (e.g., SAP transaction codes, configuration parameters, region codes)
+- Comparison tables, before/after contrasts, checklists with checkmarks
+- Minimal whitespace — page utilization rate should be 85-90%, almost no empty space
+- Color-coded sections using brand palette to differentiate content zones
+- Bottom section with compliance notes, validation mechanisms, or summary footnotes
+- The page should feel like a McKinsey/BCG deliverable — packed with structured, actionable information
 
 **When to use**: Strategy presentations, solution architecture deep-dives, project deliverable decks, due diligence reports
 
 **Prompt prefix**:
-> 高信息密度咨询风格。布局紧凑，多栏排版，内容区块丰富，每张幻灯片承载大量信息。适合高管和领域专家阅读。字体偏小(10-12pt正文)，充分利用页面空间。包含对比表格、流程图、数据卡片等多种信息组件。
+> 高信息密度咨询风格（参考麦肯锡/BCG交付物标准）。页面信息极度密集，包含4-6个独立内容区块。正文字体8-10pt，脚注7-8pt。多栏排版（2-3栏），每栏内部还有嵌套的子区块、表格和列表。必须包含：多层级标题体系（章节→子标题→要点→子要点→脚注）、横跨页面全宽的流程图（带图标和步骤标签）、技术细节标注框（含SAP事务码、配置参数等）、底部合规说明或验证机制区域。页面利用率85-90%，几乎没有空白区域。每一寸空间都必须承载有意义的结构化信息。这是一张可以直接交付给客户高管的咨询文档页面。
 
 ---
 
