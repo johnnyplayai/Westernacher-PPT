@@ -189,10 +189,11 @@ Brand visual definitions are stored in `references/westernacher-brand.md`. Read 
 When constructing prompts, **always prepend the brand specifications** from the reference file before the user's slide content. This ensures consistent colors, fonts, icons, and layout rules across all generated slides.
 
 The brand file defines:
-- Primary colors: Dark Gray #3C4652, White #FFFFFF, Blue #1596D1
-- Secondary colors: grays (#5D6A76, #858F98) and blues (#72B7E2, #92CCEA)
+- Color-to-element mapping: 章节标题=蓝色#1596D1, 主标题=深灰#3C4652, 正文=深灰#3C4652, 强调=蓝色#1596D1
+- Secondary colors: grays (#282E36, #5D6A76, #858F98), blues (#72B7E2, #92CCEA), violets (#3E276D, #7768AE, #CECAE5), browns (#8B744D, #BDA06E, #D8C6A8)
 - Typography: Microsoft YaHei, with specific sizes per element type
 - Icon style: Line Icons, clean and minimal
+- Color prohibitions: no colors outside brand palette, no color swatches/cards in output, no hex values as visible text
 - Output restrictions: no percentage annotations, no font size labels, no section markers, no logo
 
 ## Input Preprocessing (Critical Step)
@@ -288,47 +289,83 @@ After preprocessing, wrap the cleaned content into a generation prompt:
 ### Prompt Template
 
 ```
-根据以下PPT描述文本生成一张PPT幻灯片图片。白底商务咨询风格，2K清晰度。
+生成一张高质量PPT幻灯片图片。这是一张真实的商务咨询演示文稿页面，不是设计稿或色板展示。
+
+## 绝对禁止（违反任何一条即为失败）
+
+1. 禁止出现颜色色卡、色板、颜色样本、颜色方块展示
+2. 禁止在画面中显示任何 hex 颜色值文字（如 #3C4652）
+3. 禁止出现字体大小标签（如 24pt、12pt）
+4. 禁止出现 section、top、bottom 等布局标注
+5. 禁止出现 Westernacher logo
+6. 禁止使用以下颜色以外的任何颜色
+
+## 颜色规则（严格执行，不可偏离）
+
+页面背景：纯白色
+章节标题（页面左上角小字）：蓝色 #1596D1
+主标题（章节标题下方大字加粗）：深灰色 #3C4652
+所有正文文字：深灰色 #3C4652
+强调数据/关键指标：蓝色 #1596D1
+次要文字/分隔线：#5D6A76
+弱化元素：#858F98
+数据可视化/图表：#72B7E2 或 #92CCEA
+页码（右下角8pt）：#858F98
 
 ## 风格要求
 
 <STYLE PROMPT PREFIX — from references/slide-styles.md, based on user's chosen style>
 
-## Westernacher 品牌视觉标准
+## 排版要求
 
-### 主色调
-Dark Gray #3C4652 | White #FFFFFF | Blue #1596D1
-
-### 次要颜色
-灰色系：#5D6A76 (中灰) | #858F98 (浅灰)
-蓝色系：#72B7E2 (中蓝) | #92CCEA (淡蓝)
-
-### 排版要求
 - 字体：微软雅黑 (Microsoft YaHei)
-- 图标：简洁的 Line Icons
-- 限制：不要在图片中输出包含任何关于百分比、文字大小(如24pt、12pt等)、section、top等标注描述
-- 页脚：右下角放置8号字体的页码
-- 无需输出Westernacher logo
-- 严格按照位置以及文字大小定义输出
+- 图标：简洁线性图标 (Line Icons)，细线条，颜色跟随所在区域
+- 严格按照下方描述的位置和层级关系输出每个元素
+- 页面必须看起来像一张真实的、可以直接用于客户汇报的PPT页面
 
 ## 详细内容排版
 
-<USER'S SLIDE DESCRIPTION HERE>
+<PREPROCESSED SLIDE DESCRIPTION HERE>
 ```
 
 **Example** (high-density style):
 ```
-根据以下PPT描述文本生成一张PPT幻灯片图片。白底商务咨询风格，2K清晰度。
+生成一张高质量PPT幻灯片图片。这是一张真实的商务咨询演示文稿页面，不是设计稿或色板展示。
+
+## 绝对禁止（违反任何一条即为失败）
+
+1. 禁止出现颜色色卡、色板、颜色样本、颜色方块展示
+2. 禁止在画面中显示任何 hex 颜色值文字（如 #3C4652）
+3. 禁止出现字体大小标签（如 24pt、12pt）
+4. 禁止出现 section、top、bottom 等布局标注
+5. 禁止出现 Westernacher logo
+6. 禁止使用以下颜色以外的任何颜色
+
+## 颜色规则（严格执行，不可偏离）
+
+页面背景：纯白色
+章节标题（页面左上角小字）：蓝色 #1596D1
+主标题（章节标题下方大字加粗）：深灰色 #3C4652
+所有正文文字：深灰色 #3C4652
+强调数据/关键指标：蓝色 #1596D1
+次要文字/分隔线：#5D6A76
+弱化元素：#858F98
+数据可视化/图表：#72B7E2 或 #92CCEA
+页码（右下角8pt）：#858F98
 
 ## 风格要求
 
-高信息密度咨询风格。布局紧凑，多栏排版，内容区块丰富，每张幻灯片承载大量信息。适合高管和领域专家阅读。字体偏小(10-12pt正文)，充分利用页面空间。包含对比表格、流程图、数据卡片等多种信息组件。
+高信息密度咨询风格。布局紧凑，多栏排版，内容区块丰富，每张幻灯片承载大量信息。适合高管和领域专家阅读。字体偏小(10-12pt正文)，充分利用页面空间。包含对比表格、流程图、数据卡片等多种信息组件。页面上的每一寸空间都应承载有意义的信息，最小化留白。
 
-## Westernacher 品牌视觉标准
-...（品牌规范）
+## 排版要求
+
+- 字体：微软雅黑 (Microsoft YaHei)
+- 图标：简洁线性图标 (Line Icons)，细线条
+- 严格按照下方描述的位置和层级关系输出每个元素
+- 页面必须看起来像一张真实的、可以直接用于客户汇报的PPT页面
 
 ## 详细内容排版
-...（用户的幻灯片描述）
+...（预处理后的幻灯片描述）
 ```
 
 ## Error Handling
