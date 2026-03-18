@@ -14,12 +14,32 @@ This file defines the brand visual identity for Westernacher PPT slides. When ge
 
 ## Secondary Brand Colors
 
+### Gray Shades (Dark Gray 色阶)
 | Color | Hex | Usage |
 |-------|-----|-------|
+| Darkest Gray | #282E36 | Deep backgrounds, strong contrast |
 | Mid Gray | #5D6A76 | Secondary text, dividers |
 | Light Gray | #858F98 | Chart accents, subtle elements |
+
+### Blue Shades (Blue 色阶)
+| Color | Hex | Usage |
+|-------|-----|-------|
 | Mid Blue | #72B7E2 | Data visualization, charts |
 | Light Blue | #92CCEA | Background blocks, gradients |
+
+### Violet (紫色系列)
+| Color | Hex | Usage |
+|-------|-----|-------|
+| Dark Violet | #3E276D | Complex graphics, deep accent |
+| Mid Violet | #7768AE | Illustrations, partial highlights |
+| Light Violet | #CECAE5 | Soft backgrounds, subtle accents |
+
+### Brown (棕色系列)
+| Color | Hex | Usage |
+|-------|-----|-------|
+| Dark Brown | #8B744D | Complex graphics, warm accent |
+| Mid Brown | #BDA06E | Illustrations, partial highlights |
+| Light Brown | #D8C6A8 | Soft backgrounds, warm tones |
 
 
 
