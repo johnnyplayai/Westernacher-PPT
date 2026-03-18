@@ -1,11 +1,11 @@
 ---
 name: Westernacher-PPT
-description: "Generate PPT slide images using the Nanabanana API (gemini-3.1-flash-image-preview). Use this skill whenever the user asks to generate PPT images, create slide visuals, make presentation graphics, or mentions Nanabanana/nanabanana. Also trigger when the user provides detailed PPT layout descriptions and wants them turned into actual images. Covers single and batch (parallel Agent Team) generation of consulting-style PPT slides."
+description: "Generate PPT slide images using the Nanabanana API (gemini-3.1-flash-image-preview). Use this skill whenever the user asks to generate PPT images, create slide visuals, make presentation graphics, or mentions Nano Banana Pro/Nano Banana. Also trigger when the user provides detailed PPT layout descriptions and wants them turned into actual images. Covers single and batch (parallel Agent Team) generation of consulting-style PPT slides."
 ---
 
-# Nanabanana PPT Image Generator
+# Westernacher PPT Image Generator
 
-Generate high-quality PPT slide images from detailed text descriptions using the Nanabanana API (OpenAI-compatible endpoint with Gemini image generation models).
+Generate high-quality PPT slide images from detailed text descriptions using the Nano Banana API (OpenAI-compatible endpoint with Gemini image generation models).
 
 ## API Configuration
 
