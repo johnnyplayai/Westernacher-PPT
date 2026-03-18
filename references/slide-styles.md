@@ -39,7 +39,7 @@ When generating slides, the user must choose a style. Each style defines informa
 **Visual characteristics**:
 - Balanced layouts with 2-3 distinct content zones per slide
 - Moderate font sizes (10-12pt body, 8-9pt footnotes)
-- Top 20% of page: chapter title + action title (key message), visually separated by a thin blue #1596D1 horizontal line
+- Top 20% of page: chapter title + action title (key message), visually separated by a thin dark gray #3C4652 horizontal line
 - Middle 60%: 2-column layout, each column contains a content card with header bar, bullet list, and optional icon/diagram
 - Bottom 20%: summary bar or key takeaway strip with 2-3 metrics side by side
 - Each content card has a colored header bar (blue #1596D1 or dark gray #3C4652) with white text title
@@ -64,7 +64,7 @@ When generating slides, the user must choose a style. Each style defines informa
 **Audience expectation**: 10 seconds per slide — instant comprehension required
 
 **Visual characteristics**:
-- Top 15%: chapter title (blue #1596D1, 10pt) + action title (dark gray #3C4652, 22-26pt bold) — the action title IS the core message, must be a complete sentence
+- Top 15%: chapter title (dark gray #3C4652, 10pt) + action title (blue #1596D1, 22-26pt bold) — the action title IS the core message, must be a complete sentence
 - Middle 50%: maximum 3 large KPI cards arranged horizontally, each card contains:
   - A large number (36-48pt, blue #1596D1 bold)
   - A trend indicator arrow (up/down, green/red)
